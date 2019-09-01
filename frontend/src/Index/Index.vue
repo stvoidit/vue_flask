@@ -1,20 +1,16 @@
 <template>
-<div id="app">
+<div>
   <Header></Header>
   <body>
     <div class="container justify-content-center">
       <h1>Index page</h1>
       <Navigate></Navigate>
-    </div>
-    <div class="container">
-      <table class="table table-sm table-hover">
-        <tbody>
-          <tr v-for="task in tasks" :key="task.id">
-            <td>{{task.id}}</td>
-            <td>{{task.title}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <nav>
+        <router-link class="nav-link" :to="{name: 'about'}">Aboud</router-link>
+        <router-link class="nav-link" :to="{name: 'sometable'}">Table One</router-link>
+        <router-view></router-view>
+      </nav>
+      <div id="app"></div>
     </div>
   </body>
 </div>
@@ -23,19 +19,9 @@
 <script>
 import Header from "@/Header/Header.vue";
 import Navigate from "@/Header/Navigate.vue";
-import axios from "axios";
+
 export default {
   name: "index",
-  components: { Header, Navigate },
-  data() {
-    return {
-      tasks: []
-    };
-  },
-  created() {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
-      .then(res => (this.tasks = res.data));
-  }
+  components: { Header, Navigate }
 };
 </script>
