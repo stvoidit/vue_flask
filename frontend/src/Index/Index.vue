@@ -5,6 +5,7 @@
     <div class="container justify-content-center">
       <h1>Index page</h1>
       <Navigate></Navigate>
+      <p>dqwedwqed</p>
       <nav>
         <router-link class="nav-link" :to="{name: 'about'}">Aboud</router-link>
         <router-link class="nav-link" :to="{name: 'sometable'}">Table One</router-link>
