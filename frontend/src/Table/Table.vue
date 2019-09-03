@@ -6,7 +6,7 @@
       <Navigate></Navigate>
     </div>
     <div class="container">
-      <input type="text" placeholder="your choise" :value="userChoise"/>
+      <input type="text" placeholder="your choise" :value="userChoise" />
       <div class="input-field col s12" ref="myInput">
         <select @change="selectChoise">
           <option value disabled selected>Choose your option</option>
@@ -46,7 +46,7 @@ export default {
   computed: {},
   methods: {
     selectChoise(e) {
-      this.userChoise = e.target.value
+      this.userChoise = e.target.value;
     }
   },
   watch: {}
