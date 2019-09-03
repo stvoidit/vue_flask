@@ -36,7 +36,7 @@
 <script>
 import Header from "@/Header/Header.vue";
 import Navigate from "@/Header/Navigate.vue";
-import "@/assests/materialize.min.css";
+require("@/assests/materialize.min.css")
 require("@/assests/materialize.min");
 
 export default {

@@ -6,8 +6,9 @@
       <Navigate></Navigate>
     </div>
     <div class="container">
+      <input type="text" placeholder="your choise" :value="userChoise"/>
       <div class="input-field col s12" ref="myInput">
-        <select>
+        <select @change="selectChoise">
           <option value disabled selected>Choose your option</option>
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
@@ -27,15 +28,27 @@
 import Header from "@/Header/Header.vue";
 import Navigate from "@/Header/Navigate.vue";
 import customeTable from "./components/ComeTable";
-import "@/assests/materialize.min.css";
-import {Printing, A} from "@/assests/mymy"
-require("@/assests/materialize.min")
+import { Printing, A } from "@/assests/mymy";
+require("@/assests/materialize.min.css");
+require("@/assests/materialize.min");
 
 export default {
   name: "table",
   components: { Header, Navigate, customeTable },
   mounted() {
-    M.AutoInit()
-  }
+    M.AutoInit();
+  },
+  data() {
+    return {
+      userChoise: null
+    };
+  },
+  computed: {},
+  methods: {
+    selectChoise(e) {
+      this.userChoise = e.target.value
+    }
+  },
+  watch: {}
 };
 </script>
