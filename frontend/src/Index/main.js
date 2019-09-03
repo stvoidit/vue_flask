@@ -9,7 +9,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   el: "#app",
-  components: [About, TableOne],
   render: h => h(Index)
 })
 

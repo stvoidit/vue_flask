@@ -1,6 +1,5 @@
 <template>
 <div id="app">
-  <link rel="stylesheet" :scr="mzcss" />
   <body>
     <div class="container justify-content-center">
       <h1>i am table</h1>
@@ -28,7 +27,7 @@
 import Header from "@/Header/Header.vue";
 import Navigate from "@/Header/Navigate.vue";
 import customeTable from "./components/ComeTable";
-import mzcss from "@/assests/materialize.min.css";
+import "@/assests/materialize.min.css";
 import {Printing, A} from "@/assests/mymy"
 require("@/assests/materialize.min")
 
@@ -37,7 +36,6 @@ export default {
   components: { Header, Navigate, customeTable },
   mounted() {
     M.AutoInit()
-    Printing(M)
   }
 };
 </script>

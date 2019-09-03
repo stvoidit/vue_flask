@@ -10,6 +10,9 @@
 </template>
 <script>
 export default {
-  name: 'about'
+  name: 'about',
+  mounted() {
+    console.log('iam about')
+  }
 }
 </script>

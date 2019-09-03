@@ -6,9 +6,10 @@ app = Flask(__name__,
             static_folder='../frontend/frontend/static')
 
 
-@app.route('/')
-@app.route('/index')
-def index():
+@app.route('/', defaults={'p': ''})
+@app.route('/index/', defaults={'p': ''})
+@app.route('/index/<path:p>')
+def index(p):
     return render_template('index.html')
 
 
