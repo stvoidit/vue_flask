@@ -1,19 +1,21 @@
 module.exports = {
+  devServer: {
+    proxy: 'http://127.0.0.1:5000'
+  },
   outputDir: 'frontend',
   assetsDir: 'static',
-  // indexPath: 'templates/index.html',
   pages: {
-    index: {
-      entry: 'src/Index/main.js',
-      filename: 'templates/index.html',
-      title: 'Index',
-      chunks: ['chunk-vendors', 'chunk-common', 'index']
+    facts: {
+      entry: 'src/Facts/main.js',
+      filename: 'templates/facts.html',
+      title: 'Facts',
+      chunks: ['chunk-vendors', 'chunk-common', 'facts']
     },
-    table: {
-      entry: 'src/Table/main.js',
-      filename: 'templates/table.html',
-      title: 'Table',
-      chunks: ['chunk-vendors', 'chunk-common', 'table']
+    something: {
+      entry: 'src/Something/main.js',
+      filename: 'templates/something.html',
+      title: 'Something',
+      chunks: ['chunk-vendors', 'chunk-common', 'something']
     },
   }
 }
