@@ -9,7 +9,7 @@ blueprint_facts = Blueprint('blueprint_facts', __name__,
 
 @blueprint_facts.route("/table-facts")
 def VUE_todo():
-    return render_template("todo.html")
+    return render_template("facts.html")
 
 @blueprint_facts.route("/getFacts")
 def get_facts():

@@ -6,7 +6,7 @@ blueprint_something = Blueprint('blueprint_something', __name__,
                              template_folder='templates_something',
                              url_prefix="/something")
 
-@blueprint_something.route("/something")
+@blueprint_something.route("/cats")
 def VUE_something():
     return render_template("something.html")
 
